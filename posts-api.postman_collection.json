@@ -1,0 +1,266 @@
+{
+	"variables": [],
+	"info": {
+		"name": "posts-api",
+		"_postman_id": "41a8c4b8-dfb0-3763-ef88-05c7e4fdfa79",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "add post",
+			"request": {
+				"url": "https://vast-chamber-06347.herokuapp.com/api/posts",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDdiNjNhYWRhMDhiMjFkZjRmMjU1YTMiLCJyb2xlIjoidXNlciIsImlhdCI6MTYxODY5OTE4NiwiZXhwIjoxNjE4OTU4Mzg2fQ.sDsFtOxHlSuQ74TOX8vxrpsBFzFvR0wNrD-qb65Z2fs",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"test2\",\n\t\"body\": \"this is test post 2\",\n\t\"image\": \"https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=750&q=80\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "add comment",
+			"request": {
+				"url": "https://vast-chamber-06347.herokuapp.com/api/posts/607b72f5fff8e8348c3c9ec4/comment",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDdiNjNhYWRhMDhiMjFkZjRmMjU1YTMiLCJyb2xlIjoidXNlciIsImlhdCI6MTYxODc0MDgzNSwiZXhwIjoxNjE5MDAwMDM1fQ.EsvNGq5QXgOn8IDZPn8qi6Wl8KpeUYY6CxMNRy-90As",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"comment\": \"this is the first comment\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "edit post",
+			"request": {
+				"url": "https://vast-chamber-06347.herokuapp.com/api/posts/607c0697f4047f0004f78464",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDdiNjNhYWRhMDhiMjFkZjRmMjU1YTMiLCJyb2xlIjoidXNlciIsImlhdCI6MTYxODc0MDgzNSwiZXhwIjoxNjE5MDAwMDM1fQ.EsvNGq5QXgOn8IDZPn8qi6Wl8KpeUYY6CxMNRy-90As",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"test post 123\",\n\t\"body\": \"this is test post 2\",\n\t\"image\": \"https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=750&q=80\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "edit comment",
+			"request": {
+				"url": "https://vast-chamber-06347.herokuapp.com/api/posts/607b72f5fff8e8348c3c9ec4/comment/607c0781f4047f0004f78465",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDdiNjNhYWRhMDhiMjFkZjRmMjU1YTMiLCJyb2xlIjoidXNlciIsImlhdCI6MTYxODY5OTE4NiwiZXhwIjoxNjE4OTU4Mzg2fQ.sDsFtOxHlSuQ74TOX8vxrpsBFzFvR0wNrD-qb65Z2fs",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"comment\": \"this is the first comment 2\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "remove comment",
+			"request": {
+				"url": "https://vast-chamber-06347.herokuapp.com/api/posts/607b72f5fff8e8348c3c9ec4/comment/607c53300c690c00043e99d9",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDdiNjNhYWRhMDhiMjFkZjRmMjU1YTMiLCJyb2xlIjoidXNlciIsImlhdCI6MTYxODY5OTE4NiwiZXhwIjoxNjE4OTU4Mzg2fQ.sDsFtOxHlSuQ74TOX8vxrpsBFzFvR0wNrD-qb65Z2fs",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "remove post",
+			"request": {
+				"url": "https://vast-chamber-06347.herokuapp.com/api/posts/607c55ea0c690c00043e99dc",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDdiNjNhYWRhMDhiMjFkZjRmMjU1YTMiLCJyb2xlIjoidXNlciIsImlhdCI6MTYxODc0MDgzNSwiZXhwIjoxNjE5MDAwMDM1fQ.EsvNGq5QXgOn8IDZPn8qi6Wl8KpeUYY6CxMNRy-90As",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"test2\",\n\t\"description\": \"this is test product 1\",\n\t\"image\": \"https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=750&q=80\",\n\t\"price\": 123,\n\t\"quantity\": 1000,\n\t\"category\": \"furniture\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "signup",
+			"request": {
+				"url": "https://vast-chamber-06347.herokuapp.com/api/user",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"firstName\": \"bob\",\n\t\"lastName\": \"marley\",\n\t\"email\": \"testt654654@gmail.com\",\n\t\"password\": \"123456\",\n\t\"photo\": \"https://image.freepik.com/vecteurs-libre/homme-affaires-caractere-avatar-isole_24877-60111.jpg\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"url": "https://vast-chamber-06347.herokuapp.com/api/user/auth",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"testt654654@gmail.com\",\n\t\"password\": \"123456\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "list posts",
+			"request": {
+				"url": "https://vast-chamber-06347.herokuapp.com/api/posts",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"test1\",\n\t\"description\": \"this is test product 1\",\n\t\"image\": \"https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=750&q=80\",\n\t\"price\": 123,\n\t\"quantity\": 1000\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "get one post",
+			"request": {
+				"url": "https://vast-chamber-06347.herokuapp.com/api/posts/607b72f5fff8e8348c3c9ec4",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"test1\",\n\t\"description\": \"this is test product 1\",\n\t\"image\": \"https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=750&q=80\",\n\t\"price\": 123,\n\t\"quantity\": 1000\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "get profile",
+			"request": {
+				"url": "https://vast-chamber-06347.herokuapp.com/api/user/me",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDdiNjNhYWRhMDhiMjFkZjRmMjU1YTMiLCJyb2xlIjoidXNlciIsImlhdCI6MTYxODY5OTE4NiwiZXhwIjoxNjE4OTU4Mzg2fQ.sDsFtOxHlSuQ74TOX8vxrpsBFzFvR0wNrD-qb65Z2fs",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"test1\",\n\t\"description\": \"this is test product 1\",\n\t\"image\": \"https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=750&q=80\",\n\t\"price\": 123,\n\t\"quantity\": 1000\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
